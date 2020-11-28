@@ -43,7 +43,7 @@ Teknis Pengerjaan
 
 ## Soal 1
  **PERINTAH**
- Membuat topologi jaringan, #<Surabaya> sebagai router, Malang sebagai DNS server, Tuban sebagai DHCP server, serta Mojokerto sebagai proxy server, dan UML lainnya sebagai client.
+ Membuat topologi jaringan, #Surabaya> sebagai router, #Malang> sebagai DNS server, #Tuban> sebagai DHCP server, serta #Mojokerto> sebagai proxy server, dan #UML> lainnya sebagai client.
  
  **PENJELASAN**
  Pertama-tama setting awal pembuatan UML. Sintaks dari gambar topologi yang di soal sebegai berikut;
