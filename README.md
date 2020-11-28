@@ -43,7 +43,7 @@ Teknis Pengerjaan
 
 ## Soal 1
  **PERINTAH**
- Membuat topologi jaringan, Surabaya sebagai router, Malang sebagai DNS server, Tuban sebagai DHCP server, serta Mojokerto sebagai proxy server, dan UML lainnya sebagai client.
+ Membuat topologi jaringan, #<Surabaya> sebagai router, Malang sebagai DNS server, Tuban sebagai DHCP server, serta Mojokerto sebagai proxy server, dan UML lainnya sebagai client.
  
  **PENJELASAN**
  Pertama-tama setting awal pembuatan UML. Sintaks dari gambar topologi yang di soal sebegai berikut;
@@ -68,7 +68,14 @@ xterm -T GRESIK -e linux ubd0=GRESIK,jarkom umid=GRESIK eth0=daemon,,,switch1 me
 xterm -T MADIUN -e linux ubd0=MADIUN,jarkom umid=MADIUN eth0=daemon,,,switch3 mem=64M &
 xterm -T BANYUWANGI -e linux ubd0=BANYUWANGI umid-BANYUWANGI eth0=daemon,,,switch3 mem=64M &
 ```
-*Kemudian lakukan konfigurasi interface pada tiap UML supaya bisa mendapatkan layanan dari DHCP. Setelah itu buka ```/etc/network/interfaces``` pada tiap client.
+* Kemudian lakukan konfigurasi interface pada tiap UML supaya bisa mendapatkan layanan dari DHCP. Setelah itu buka ```/etc/network/interfaces``` pada tiap client.
+```
+nano /etc/network/interfaces
+```
+* Lakukan pada SURABAYA tambahkan seperti pada gambar dibawah ini.
+![1_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomer1_setting%20surabaya.jpg)
+* Lakukan pada MALANG tambahkan seperti pada gambar dibawah ini.
+![1_3](
  
 ## Soal 2
 
