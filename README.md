@@ -7,19 +7,18 @@ Kelompok T19
 
 ---
 ## Table of Contents
-* [Persiapan](#persiapan-1)
-* [Soal 1](#soal-2)
-* [Soal 2](#soal-3)
-* [Soal 3](#soal-4)
-* [Soal 4](#soal-5)
-* [Soal 5](#soal-6)
-* [Soal 6](#soal-7)
-* [Soal 7](#soal-8)
-* [Soal 8](#soal-9)
-* [Soal 9](#soal-10)
-* [Soal 10](#soal-11)
-* [Soal 11](#soal-12)
-* [Soal 12](#soal-13)
+* [Soal 1](#soal-1)
+* [Soal 2](#soal-2)
+* [Soal 3](#soal-3)
+* [Soal 4](#soal-4)
+* [Soal 5](#soal-5)
+* [Soal 6](#soal-6)
+* [Soal 7](#soal-7)
+* [Soal 8](#soal-8)
+* [Soal 9](#soal-9)
+* [Soal 10](#soal-10)
+* [Soal 11](#soal-11)
+* [Soal 12](#soal-12)
 ---
 
 ``` 
@@ -69,7 +68,7 @@ xterm -T GRESIK -e linux ubd0=GRESIK,jarkom umid=GRESIK eth0=daemon,,,switch1 me
 xterm -T MADIUN -e linux ubd0=MADIUN,jarkom umid=MADIUN eth0=daemon,,,switch3 mem=64M &
 xterm -T BANYUWANGI -e linux ubd0=BANYUWANGI umid-BANYUWANGI eth0=daemon,,,switch3 mem=64M &
 ```
--Kemudian lakukan konfigurasi interface pada tiap UML supaya bisa mendapatkan layanan dari DHCP. Setelah itu buka ```/etc/network/interfaces``` pada tiap client.
+*Kemudian lakukan konfigurasi interface pada tiap UML supaya bisa mendapatkan layanan dari DHCP. Setelah itu buka ```/etc/network/interfaces``` pada tiap client.
  
 ## Soal 2
 
