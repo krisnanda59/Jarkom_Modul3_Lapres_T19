@@ -42,10 +42,10 @@ Teknis Pengerjaan
 ```
 
 ## Soal 1
- **PERINTAH**
- Membuat topologi jaringan, <b>Surabaya</b> sebagai router, <b>Malang</b> sebagai DNS server, <b>Tuban</b> sebagai DHCP server, serta <b>Mojokerto</b> sebagai proxy server, dan <b>UML</b> lainnya sebagai client.
+ **PERINTAH**\
+ Membuat topologi jaringan, *SURABAYA* sebagai router, *MALANG* sebagai DNS server, *TUBAN* sebagai DHCP server, serta *MOJOKERTO* sebagai proxy server, dan *UML* lainnya sebagai client.
  
- **PENJELASAN**
+ **PENJELASAN**\
  Pertama-tama setting awal pembuatan UML. Sintaks dari gambar topologi yang di soal sebegai berikut;
  ![1_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomer1_setting%20mojokerto.jpg)
  ```
@@ -72,10 +72,23 @@ xterm -T BANYUWANGI -e linux ubd0=BANYUWANGI umid-BANYUWANGI eth0=daemon,,,switc
 ```
 nano /etc/network/interfaces
 ```
-* Lakukan pada SURABAYA tambahkan seperti pada gambar dibawah ini.
+* Lakukan pada *SURABAYA* tambahkan seperti pada gambar dibawah ini.
 ![1_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomer1_setting%20surabaya.jpg)
-* Lakukan pada MALANG tambahkan seperti pada gambar dibawah ini.
-![1_3](
+* Lakukan pada *MALANG* tambahkan seperti pada gambar dibawah ini.
+![1_3]()
+* Lakukan pada *TUBAN* tambahkan seperti pada gambar dibawah ini.
+![1_4](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomer1_setting%20tuban.jpg)
+* Lakukan pada *MOJOKERTO* tambahkan seperti pada gambar dibawah ini.
+![1_5](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomer1_setting%20mojokerto.jpg)
+* Lakukan pada *BANYUWANGI* tambahkan seperti pada gambar dibawah ini.
+![1_6](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20banyuwangi_step1.png)
+Lakukan pada *SIDOARJO* tambahkan seperti pada gambar dibawah ini.
+![1_7](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20sidoarjo_step1.png)
+Lakukan pada *MADIUN* tambahkan seperti pada gambar dibawah ini.
+![1_8](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20madiun_step1.png)
+Lakukan pada *GRESIK* tambahkan seperti pada gambar dibawah ini.
+![1_9]()
+
  
 ## Soal 2
 
