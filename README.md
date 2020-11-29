@@ -201,7 +201,7 @@ cat /etc/resolv.conf
   Client pada subnet 3 mendapatkan range IP dari 192.168.1.50 sampai 192.168.1.70.
  
  **PENJELASAN**
-  * Lakukan konfigurasi subnet TUBAN untuk client BANYUWANGI dan MADIUN dengan cara melakukan perintah.
+  * Pertama konfigurasikan subnet TUBAN untuk client BANYUWANGI dan MADIUN dengan cara melakukan perintah:
 
 ```
 nano /etc/dhcp/dhcpd.conf
@@ -239,7 +239,7 @@ nano /etc/network/interfaces
 ![4_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20banyuwangi_step1.png)
 ![4_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20madiun_step1.png)
 
-* Setelah itu lakukan testing dengan perintah. 
+* Setelah itu testing dengan perintah. 
 
 ```
 cat /etc/resolv.conf
@@ -255,13 +255,13 @@ cat /etc/resolv.conf
   Client mendapatkan DNS Malang dan DNS 202.46.129.2 dari DHCP
   
  **PENJELASAN**
- * Lakukan konfigurasi DHCP Server pada TUBAN dengan perintah
+ * Pertama kami mengkonfigurasi DHCP Server pada TUBAN dengan perintah:
 
 ```
 nano /etc/dhcp/dhcpd.conf
 ````
 
-* Dan lakukan konfigurasi sperti dibawah ini.
+* Kemudian dikonfigurasikan sperti dibawah ini.
 
 ![5_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
@@ -276,13 +276,13 @@ nano /etc/dhcp/dhcpd.conf
   Client di subnet 1 mendapatkan peminjaman alamat IP selama 5 menit, sedangkan client pada subnet 3 mendapatkan peminjaman IP selama 10 menit.
  
  **PENJELASAN**
- * Lakukan konfigurasi pada ``/etc/dhcp/dhcpd.conf`` dengan perintah.
+ * Pertama kami mengkonfigurasi pada ``/etc/dhcp/dhcpd.conf`` dengan menginput:
 
 ```
 nano /etc/dhcp.dhcpd.conf
 ```
 
-* Dan lakukan konfigurasi seperti pada gambar dibawah ini.
+* Kemudian kami mengkonfigurasi seperti dibawah ini.
 
 ![6_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
@@ -293,13 +293,13 @@ nano /etc/dhcp.dhcpd.conf
   * Password :inipassw0rdta_yyy
  
  **PENJELASAN**
- * Lakukan penginstallan ``apache2-utils`` pada UML MOJOKERTO. Sebelumnya kalian sudah harus melakukan ``apt-get update``. Ketikkan:
+ * Pertama install ``apache2-utils`` pada UML MOJOKERTO. Sebelumnya kami harus melakukan ``apt-get update``, input perintah:
 
 ```
 apt-get install apache2-utils
 ```
 
-* Setelah proses instalasi selesai. Lakukan pembuatan user login dengan perintah.
+* Setelah proses instalasi selesai, kami membuat user login dengan perintah.
 
 ```
 htpasswd -c /etc/squid/passwd jarkom203
@@ -322,14 +322,14 @@ http_access allow USERS
 
 ![7_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step1.png)
 
-* Lakukan restart squid dengan perintah.
+* Terus restart squid menggunakan perintah.
 
 ```
 service squid restart
 ```
 ![7_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step3.png)
 
-* Kemudian cobalah untuk mengakses web (usahakan menggunakan mode incognito/private), akan muncul pop-up untuk login menggunakan username dan password yang telah kita buat.
+* Kemudian akses web (usahakan menggunakan mode incognito/private), akan muncul pop-up untuk login menggunakan username dan password yang telah kita buat.
 
 ![7_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step%20login.png)
 
@@ -338,35 +338,77 @@ service squid restart
   setiap hari Selasa-Rabu pukul 13.00-18.00. Bu Meguri membatasi penggunaan internet Anri hanya pada jadwal yang telah ditentukan itu saja. Maka diluar jam tersebut, Anri tidak   dapat mengakses jaringan internet dengan proxy tersebut.
   
  **PENJELASAN**
- * Buatlah file baru pada UML MOJOKERTO bernama acl.conf di folder squid
+ * Pertama kami membuat file baru pada UML MOJOKERTO bernama acl.conf dalam folder squid
 
 ```
 nano /etc/squid/acl.conf
 ```
 
-* Dan isikan seperti gambar dibawah ini.
+* Lalu isikan seperti gambar dibawah ini.
 
 ![8_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step2.png)
 
-* Setelah itu simpan filenya. Dan buka file squid.conf dengan perintah
+* Setelah itu kami simpan filenya, kemudian buka file squid.conf menggunakan perintah
 
 ```
 nano /etc/squid/squid.conf
 ```
 
-* Setelah itu lakukan konfigurasi seperti pada gambar dibawah ini.
+* Setelah itu kami mengkonfigurasi seperti pada gambar dibawah ini.
 
 ![](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step1.png)
 
-* Kemudian restart squid dengan perintah.
+* Kemudian restart squid menggunakan perintah.
 
 ```
 service squid restart
 ```
 
 ## Soal 9
+ **PERINTAH**\
+  Setiap hari Selasa-Kamis pukul 21.00 - 09.00 keesokan harinya (sampai Jumat jam 09.00). Agar Anri bisa fokus mengerjakan TA.
+ 
+ **PENJELASAN**
+ * Pertama kami mengkonfigurasi acl pada MOJOKERTO dengan command. 
+
+```
+nano /etc/squid/acl.conf
+```
+
+* Lalu dikonfigurasi sesuai dengan gambar dibawah ini.
+
+![9_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20set%20waktu.png)
+
+* Kemudian kami mengkonfigurasi squid.conf dengan command.
+
+```
+nano /etc/squid/squid.conf
+```
+
+* Selanjutnya restart squid dengan perintah.
+
+```
+service squid restart
+```
+
+* Terakhir tinggal dicoba akses web http://its.ac.id (usahakan menggunakan mode incognito/private). Pasti muncul halaman error semisal mengakses diluar waktu yang telah diset.
 
 ## Soal 10
+ **PERINTAH**\
+  Setiap dia mengakses google.com, maka akan di redirect menuju monta.if.its.ac.id agar Anri selalu ingat untuk mengerjakan TA.
+  
+ **PENJELASAN**
+ * Pertama-tama kami mengkonfigurasi redirect pada squid.conf menggunakan command.
+
+```
+nano /etc/suqid/squid.conf
+```
+
+* Kemudian kami mengkonfigurasi seperti dibawah ini:
+
+![10_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step1.png)
+
+* Hasilnya nanti pasti setiap mengakses google.com pasti akan dilempar ke monta.if.its.ac.id.
 
 ## Soal 11
 
