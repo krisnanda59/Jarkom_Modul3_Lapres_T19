@@ -151,15 +151,12 @@ nano /etc/dhcp/dhcpd.conf
   
  **PENJELASAN**\
   * Pertama-tama konfigurasi subnet *TUBAN* untuk client *GRESIK* dan *SIDOARJO* dengan menggunakan ``` nano /etc/dhcp/dhcpd.conf ```
-  * Disini kami membuat beberapa konfigurasi, yang pertama ada pada *subnet1* dengan command:   
+  * Disini kami membuat konfigurasi pada *subnet1* dengan command:   
   ```
    range 192.168.0.10 192.168.0.11
    range 192.168.0.110 192.168.0.100
   ```  
-  * yang kedua berada di subnet 2 dengan command :
-  ```
-  range 192.168.1.50 192.168.1.7
-  ```
+
 ![3_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
 
@@ -176,12 +173,12 @@ service isc-dhcp-server restart
 nano /etc/network/interfaces
 ```
 
-* Dan isi konfigurasi sesuai pada gambar dibawah ini.
+* Berikut konfigurasi yang kami lakukan pada *Gresik* dan *Sidoarjo*.
 
 ![3_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20gresik_step2.png)
 ![3_4](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20sidoarjo_step1.png)
 
-* Setelah itu lakukan testing dengan perintah. 
+* Setelah itu kami melakukan testing dengan perintah. 
 ```
 cat /etc/resolv.conf
 ```
@@ -195,40 +192,32 @@ cat /etc/resolv.conf
   Client pada subnet 3 mendapatkan range IP dari 192.168.1.50 sampai 192.168.1.70.
  
  **PENJELASAN**
-  * Pertama konfigurasikan subnet TUBAN untuk client BANYUWANGI dan MADIUN dengan cara melakukan perintah:
+  * Pertama kami melakukan konfigurasi pada TUBAN 
 
 ```
 nano /etc/dhcp/dhcpd.conf
 ```
 
-* Tambahkan script berikut dan sesuai dengan gambar dibawah.
-
-```
-subnet 192.168.0.0 netmask 255.255.255.0 {
-    range 192.168.1.50 192.168.1.70;
-    option routers 192.168.0.1;
-    option broadcast-address 192.168.0.255;
-    option domain-name-servers 10.151.71.130 202.46.129.2;
-    default-lease-time 300;
-    max-lease-time 7200;
-}
-```
+  * disini kami membuat konfigurasi, di *subnet 3* pada command  
+    ```
+  range 192.168.1.50 192.168.1.7
+  ```
 
 ![4_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
-* Dan lakukan service restart dengan perintah:
+* Dan melakukan service restart dengan perintah:
 
 ```
 service isc-dhcp-server restart
 ```
 
-* Kemudian lakukan konfigurasi pada interface client *BANYUWANGI* dan *MADIUN* dengan perintah:
+* Kemudian kami melakukan konfigurasi pada interface client *BANYUWANGI* dan *MADIUN* dengan perintah:
 
 ```
 nano /etc/network/interfaces
 ```
 
-* Dan isi konfigurasi sesuai pada gambar dibawah ini.
+* Berikut konfigurasi yang kami lakukan pada *Banyuwangi* dan *Madiun*.
 
 ![4_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20banyuwangi_step1.png)
 ![4_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20madiun_step1.png)
@@ -249,17 +238,21 @@ cat /etc/resolv.conf
   Client mendapatkan DNS *Malang* dan DNS 202.46.129.2 dari DHCP
   
  **PENJELASAN**
- * Pertama kami mengkonfigurasi DHCP Server pada *TUBAN* dengan perintah:
+  * Pertama kami mengkonfigurasi DHCP Server pada *TUBAN* dengan perintah:
 
 ```
 nano /etc/dhcp/dhcpd.conf
 ````
 
-* Kemudian dikonfigurasikan sperti dibawah ini.
+  * Karena seluruh client diminta untuk mendapat DNS malang, maka disini kami membuat konfigurasi pada *subnet 1* dan *subnet 3* pada command  
+```
+option domain-name-servers 10.151.71.130, 202.46.129.2
+```  
+  * dimana ```10.151.71.130``` merupakan IP Malang kelompok kami.  
 
 ![5_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
-* Dan berikut merupak hasil dns dari *SIDOARJO*, *GRESIK*, dan *BANYUWANGI*.
+  * Dan berikut merupakan hasil dns dari *SIDOARJO*, *GRESIK*, dan *BANYUWANGI*.
 
 ![5_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20sidoarjo_step3.png)
 ![5_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20gresik_step4.png)
@@ -270,13 +263,18 @@ nano /etc/dhcp/dhcpd.conf
   Client di subnet 1 mendapatkan peminjaman alamat IP selama 5 menit, sedangkan client pada subnet 3 mendapatkan peminjaman IP selama 10 menit.
  
  **PENJELASAN**
- * Pertama kami mengkonfigurasi pada ``/etc/dhcp/dhcpd.conf`` dengan menginput:
+  * Karena diminta ada waktu peminjaman alamat IP pada semua client, maka kami melakukan konfigurasi pada ```nano /etc/dhcp.dhcpd.conf ```  
 
+  * Disini kami melakukan beberapa konfigurasi, pada *subnet 1* dengan command:
 ```
-nano /etc/dhcp.dhcpd.conf
+default-least-time 300;
+max-lease-time 7200;
+```  
+  * Dan pada *subnet 3* dengan command  
 ```
-
-* Kemudian kami mengkonfigurasi seperti dibawah ini.
+default-leat-time 600;
+max-lease-time 7200;
+```
 
 ![6_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
