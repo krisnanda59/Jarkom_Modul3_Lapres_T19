@@ -299,7 +299,13 @@ nano /etc/dhcp.dhcpd.conf
 ![6_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
 ## Soal 7
-
+ **PERINTAH**\
+  User autentikasi milik Anri memiliki format sebagai:
+  User     :userta_yyy
+  Password :inipassw0rdta_yyy
+ 
+ **PENJELASAN**
+ 
 ## Soal 8
 
 ## Soal 9
