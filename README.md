@@ -305,8 +305,76 @@ nano /etc/dhcp.dhcpd.conf
   * Password :inipassw0rdta_yyy
  
  **PENJELASAN**
- 
+ * Lakukan penginstallan ``apache2-utils`` pada UML MOJOKERTO. Sebelumnya kalian sudah harus melakukan ``apt-get update``. Ketikkan:
+
+```
+apt-get install apache2-utils
+```
+
+* Setelah proses instalasi selesai. Lakukan pembuatan user login dengan perintah.
+
+```
+htpasswd -c /etc/squid/passwd jarkom203
+```
+
+* Setelah itu edit konfigurasi squid menjadi.
+
+```
+http_port 8080
+visible_hostname mojokerto
+
+auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/passwd
+auth_param basic children 5
+auth_param basic realm Proxy
+auth_param basic credentialsttl 2 hours
+auth_param basic casesensitive on
+acl USERS proxy_auth REQUIRED
+http_access allow USERS
+```
+
+![7_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step1.png)
+
+* Lakukan restart squid dengan perintah.
+
+```
+service squid restart
+```
+![7_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step3.png)
+
+* Kemudian cobalah untuk mengakses web (usahakan menggunakan mode incognito/private), akan muncul pop-up untuk login menggunakan username dan password yang telah kita buat.
+
+![7_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step%20login.png)
+
 ## Soal 8
+ **PERINTAH**\
+  setiap hari Selasa-Rabu pukul 13.00-18.00. Bu Meguri membatasi penggunaan internet Anri hanya pada jadwal yang telah ditentukan itu saja. Maka diluar jam tersebut, Anri tidak   dapat mengakses jaringan internet dengan proxy tersebut.
+  
+ **PENJELASAN**
+ * Buatlah file baru pada UML MOJOKERTO bernama acl.conf di folder squid
+
+```
+nano /etc/squid/acl.conf
+```
+
+* Dan isikan seperti gambar dibawah ini.
+
+![8_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step2.png)
+
+* Setelah itu simpan filenya. Dan buka file squid.conf dengan perintah
+
+```
+nano /etc/squid/squid.conf
+```
+
+* Setelah itu lakukan konfigurasi seperti pada gambar dibawah ini.
+
+![](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step1.png)
+
+* Kemudian restart squid dengan perintah.
+
+```
+service squid restart
+```
 
 ## Soal 9
 
