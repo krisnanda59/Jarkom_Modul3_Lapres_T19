@@ -150,31 +150,23 @@ nano /etc/dhcp/dhcpd.conf
   Client pada subnet 1 mendapatkan range IP dari 192.168.0.10 sampai 192.168.0.100 dan 192.168.0.110 sampai 192.168.0.200.
   
  **PENJELASAN**\
-  Pertama-tama konfigurasi subnet *TUBAN* untuk client *GRESIK* dan *SIDOARJO* dengan cara melakukan perintah.
-
-```
-nano /etc/dhcp/dhcpd.conf
-```
-
-* Tambahkan script berikut dan sesuai dengan gambar dibawah.
-
-```
-subnet 192.168.0.0 netmask 255.255.255.0 {
-    range 192.168.0.10 192.168.0.100;
-    range 192.168.0.110 192.168.0.200;
-    option routers 192.168.0.1;
-    option broadcast-address 192.168.0.255;
-    option domain-name-servers 10.151.71.130 202.46.129.2;
-    default-lease-time 300;
-}
-```
-![3_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step3_berhasil%20restart.png)
-
+  * Pertama-tama konfigurasi subnet *TUBAN* untuk client *GRESIK* dan *SIDOARJO* dengan menggunakan ``` nano /etc/dhcp/dhcpd.conf ```
+  * Disini kami membuat beberapa konfigurasi, yang pertama ada pada *subnet1* dengan command:   
+  ```
+   range 192.168.0.10 192.168.0.11
+   range 192.168.0.110 192.168.0.100
+  ```  
+  * yang kedua berada di subnet 2 dengan command :
+  ```
+  range 192.168.1.50 192.168.1.7
+  ```
+ 
 * Lalu lakukan service restart dengan perintah.
 
 ```
 service isc-dhcp-server restart
 ```
+![3_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step3_berhasil%20restart.png)
 
 * Kemudian lakukan konfigurasi pada interface client *GRESIK* dan *SIDOARJO* dengan perintah:
 
