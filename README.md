@@ -212,7 +212,7 @@ cat /etc/resolv.conf
  **PERINTAH**\
   Client pada subnet 3 mendapatkan range IP dari 192.168.1.50 sampai 192.168.1.70.
  
- **PENJELASAN**\
+ **PENJELASAN**
   * Lakukan konfigurasi subnet TUBAN untuk client BANYUWANGI dan MADIUN dengan cara melakukan perintah.
 
 ```
@@ -266,7 +266,7 @@ cat /etc/resolv.conf
  **PERINTAH**\
   Client mendapatkan DNS Malang dan DNS 202.46.129.2 dari DHCP
   
- **PENJELASAN**\
+ **PENJELASAN**
  * Lakukan konfigurasi DHCP Server pada TUBAN dengan perintah
 
 ```
@@ -287,7 +287,7 @@ nano /etc/dhcp/dhcpd.conf
  **PERINTAH**\
   Client di subnet 1 mendapatkan peminjaman alamat IP selama 5 menit, sedangkan client pada subnet 3 mendapatkan peminjaman IP selama 10 menit.
  
- **PENJELASAN**\
+ **PENJELASAN**
  * Lakukan konfigurasi pada ``/etc/dhcp/dhcpd.conf`` dengan perintah.
 
 ```
