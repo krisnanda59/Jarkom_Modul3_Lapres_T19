@@ -1,5 +1,5 @@
 # Jarkom_Modul3_Lapres_T19
-Penyelesaian Soal Shift 1 Komunikasi Data, dan Jaringan Data 2020\
+Penyelesaian Soal Shift 3 Komunikasi Data, dan Jaringan Data 2020\
 Kelompok T19
   * Made Krisnanda Utama (05311840000033)
   * Muhammad Irsyad Ali (05311840000041)
@@ -46,7 +46,7 @@ Teknis Pengerjaan
  Membuat topologi jaringan, *SURABAYA* sebagai router, *MALANG* sebagai DNS server, *TUBAN* sebagai DHCP server, serta *MOJOKERTO* sebagai proxy server, dan *UML* lainnya sebagai client.
  
  **PENJELASAN**\
- Pertama-tama setting awal pembuatan UML. Sintaks dari gambar topologi yang di soal sebegai berikut;
+ Pertama-tama kami membuat topologi UML. sesuai yang ada di soal shift, sebagai berikut
  ![1_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor1_sintaks%20topologi.jpg)
  ```
  # Switch
@@ -69,34 +69,34 @@ xterm -T MADIUN -e linux ubd0=MADIUN,jarkom umid=MADIUN eth0=daemon,,,switch3 me
 xterm -T BANYUWANGI -e linux ubd0=BANYUWANGI umid-BANYUWANGI eth0=daemon,,,switch3 mem=64M &
 ```
 
-* Kemudian lakukan konfigurasi interface pada tiap UML supaya bisa mendapatkan layanan dari DHCP. Setelah itu buka ```/etc/network/interfaces``` pada tiap client.
+* Kemudian kami melakukan konfigurasi interface pada setiap UML supaya bisa mendapatkan layanan dari DHCP. dengan menggunakan sintax ```/etc/network/interfaces``` pada setiap client.
 
 ```
 nano /etc/network/interfaces
 ```
 
-* Lakukan pada *SURABAYA* tambahkan seperti pada gambar dibawah ini.
+* Interface yang sudah di setting pada *SURABAYA*.
 ![1_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomer1_setting%20surabaya.jpg)
 
-* Lakukan pada *MALANG* tambahkan seperti pada gambar dibawah ini.
+* Interface yang sudah di setting pada *MALANG*.
 ![1_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor1_settingan%20malang.jpg)
 
-* Lakukan pada *TUBAN* tambahkan seperti pada gambar dibawah ini.
+* Interface yang sudah di setting pada *TUBAN*.
 ![1_4](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomer1_setting%20tuban.jpg)
 
-* Lakukan pada *MOJOKERTO* tambahkan seperti pada gambar dibawah ini.
+* Interface yang sudah di setting pada *MOJOKERTO* .
 ![1_5](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomer1_setting%20mojokerto.jpg)
 
-* Lakukan pada *BANYUWANGI* tambahkan seperti pada gambar dibawah ini.
+* Interface yang sudah di setting pada *BANYUWANGI*.
 ![1_6](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20banyuwangi_step1.png)
 
-* Lakukan pada *SIDOARJO* tambahkan seperti pada gambar dibawah ini.
+* Interface yang sudah di setting pada *SIDOARJO*.
 ![1_7](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20sidoarjo_step1.png)
 
-* Lakukan pada *MADIUN* tambahkan seperti pada gambar dibawah ini.
+* Interface yang sudah di setting pada  *MADIUN* .
 ![1_8](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20madiun_step1.png)
 
-* Lakukan pada *GRESIK* tambahkan seperti pada gambar dibawah ini.
+* Interface yang sudah di setting pada  *GRESIK*.
 ![1_9](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20gresik_step2.png)
 
 * Dan gambar berikut merupakan hasil UML setelah kita lakukan konfigurasi.
