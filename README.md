@@ -266,8 +266,7 @@ cat /etc/resolv.conf
   Client mendapatkan DNS Malang dan DNS 202.46.129.2 dari DHCP
   
  **PENJELASAN**\
-
-* Lakukan konfigurasi DHCP Server pada TUBAN dengan perintah
+ * Lakukan konfigurasi DHCP Server pada TUBAN dengan perintah
 
 ```
 nano /etc/dhcp/dhcpd.conf
@@ -288,8 +287,7 @@ nano /etc/dhcp/dhcpd.conf
   Client di subnet 1 mendapatkan peminjaman alamat IP selama 5 menit, sedangkan client pada subnet 3 mendapatkan peminjaman IP selama 10 menit.
  
  **PENJELASAN**\
- 
-* Lakukan konfigurasi pada ``/etc/dhcp/dhcpd.conf`` dengan perintah.
+ * Lakukan konfigurasi pada ``/etc/dhcp/dhcpd.conf`` dengan perintah.
 
 ```
 nano /etc/dhcp.dhcpd.conf
