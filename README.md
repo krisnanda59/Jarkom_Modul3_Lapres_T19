@@ -104,26 +104,26 @@ nano /etc/network/interfaces
 
 ## Soal 2
  **PERINTAH**\
-  SURABAYA ditunjuk sebagai perantara (DHCP Relay) antara DHCP Server dan client.
+  *SURABAYA* ditunjuk sebagai perantara (DHCP Relay) antara DHCP Server dan client.
 
  **PENJELASAN**\
-  *  Karena surabaya ditunjuk sebagai relay, maka kami melakukan install relay di surabaya dengan menggunakan command dibawah, setelah melakukan ```apt-get update```  
+  *  Karena surabaya ditunjuk sebagai relay, maka kami melakukan install relay di *SURABAYA* dengan menggunakan command dibawah, setelah melakukan ```apt-get update```  
   ``` 
   apt-get install isc-dhcp-relay
   ```
   *  disini terdapat 3 prompt yang dapat diisi, pada prompt pertama kami mengisikan IP Tuban yaitu ```10.151.71.132```, prompt kedua kami isi dengan ``` eth1 eth2 eth3 ```  
   
-  *  Kemudian barulah kami menginstall DHCP server pada tuban menggunakan command dibawah, setelah melakukan ```apt-get update```
+  *  Kemudian barulah kami menginstall DHCP server pada *TUBAN* menggunakan command dibawah, setelah melakukan ```apt-get update```
 ```
 apt-get install isc-dhcp-server
 ```  
-  *  Proses instalasi isc-dhcp-relay pada surabaya setelah berhasil.
+  *  Proses instalasi isc-dhcp-relay pada *SURABAYA* setelah berhasil.
 ![2_4](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%202_install%20relay%20selesai_surabaya.png)
 
-  * Proses instalasi isc-dhcp-server pada tuban setelah berhasil.  
+  * Proses instalasi isc-dhcp-server pada *TUBAN* setelah berhasil.  
 ![2_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/persiapan_install%20dhcpserver_tuban%20_eror.png)
 
-  * Setelah itu kami melakukan konfigurasi pada TUBAN dengan menggunakan command ``` nano /etc/default/isc-dhcp-server ```
+  * Setelah itu kami melakukan konfigurasi pada *TUBAN* dengan menggunakan command ``` nano /etc/default/isc-dhcp-server ```
 
   * Kami menambahkan ``eth0`` pada  interfaces agar dapat diberikan layanan DHCP.
 
@@ -133,7 +133,7 @@ INTERFACE=eth0
 
 ![2_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/persiapan_install%20dhcp%20server_tuban%20_step%201.png)
 
-  * Setelah itu lakukan konfigurasi DHCP pada TUBAN dengan command.
+  * Setelah itu lakukan konfigurasi DHCP pada *TUBAN* dengan command.
 
 ```
 nano /etc/dhcp/dhcpd.conf
@@ -150,7 +150,7 @@ nano /etc/dhcp/dhcpd.conf
   Client pada subnet 1 mendapatkan range IP dari 192.168.0.10 sampai 192.168.0.100 dan 192.168.0.110 sampai 192.168.0.200.
   
  **PENJELASAN**\
-  Pertama-tama konfigurasi subnet TUBAN untuk client GRESIK dan SIDOARJO dengan cara melakukan perintah.
+  Pertama-tama konfigurasi subnet *TUBAN* untuk client *GRESIK* dan *SIDOARJO* dengan cara melakukan perintah.
 
 ```
 nano /etc/dhcp/dhcpd.conf
@@ -170,13 +170,13 @@ subnet 192.168.0.0 netmask 255.255.255.0 {
 ```
 ![3_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step3_berhasil%20restart.png)
 
-* Dan lakukan service restart dengan perintah.
+* Lalu lakukan service restart dengan perintah.
 
 ```
 service isc-dhcp-server restart
 ```
 
-* Kemudian lakukan konfigurasi pada interface client GRESIK dan SIDOARJO dengan perintah.
+* Kemudian lakukan konfigurasi pada interface client *GRESIK* dan *SIDOARJO* dengan perintah:
 
 ```
 nano /etc/network/interfaces
@@ -222,13 +222,13 @@ subnet 192.168.0.0 netmask 255.255.255.0 {
 
 ![4_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
-* Dan lakukan service restart dengan perintah.
+* Dan lakukan service restart dengan perintah:
 
 ```
 service isc-dhcp-server restart
 ```
 
-* Kemudian lakukan konfigurasi pada interface client BANYUWANGI dan MADIUN dengan perintah.
+* Kemudian lakukan konfigurasi pada interface client *BANYUWANGI* dan *MADIUN* dengan perintah:
 
 ```
 nano /etc/network/interfaces
@@ -252,10 +252,10 @@ cat /etc/resolv.conf
 
 ## Soal 5
  **PERINTAH**\
-  Client mendapatkan DNS Malang dan DNS 202.46.129.2 dari DHCP
+  Client mendapatkan DNS *Malang* dan DNS 202.46.129.2 dari DHCP
   
  **PENJELASAN**
- * Pertama kami mengkonfigurasi DHCP Server pada TUBAN dengan perintah:
+ * Pertama kami mengkonfigurasi DHCP Server pada *TUBAN* dengan perintah:
 
 ```
 nano /etc/dhcp/dhcpd.conf
@@ -265,7 +265,7 @@ nano /etc/dhcp/dhcpd.conf
 
 ![5_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
-* Dan berikut merupak hasil dns dari SIDOARJO, GRESIK, dan BANYUWANGI.
+* Dan berikut merupak hasil dns dari *SIDOARJO*, *GRESIK*, dan *BANYUWANGI*.
 
 ![5_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20sidoarjo_step3.png)
 ![5_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20gresik_step4.png)
@@ -293,13 +293,13 @@ nano /etc/dhcp.dhcpd.conf
   * Password :inipassw0rdta_yyy
  
  **PENJELASAN**
- * Pertama install ``apache2-utils`` pada UML MOJOKERTO. Sebelumnya kami harus melakukan ``apt-get update``, input perintah:
+ * Pertama install ``apache2-utils`` pada UML *MOJOKERTO*. Sebelumnya kami harus melakukan ``apt-get update``, input perintah:
 
 ```
 apt-get install apache2-utils
 ```
 
-* Setelah proses instalasi selesai, kami membuat user login dengan perintah.
+* Setelah proses instalasi selesai, kami membuat user login dengan perintah:
 
 ```
 htpasswd -c /etc/squid/passwd jarkom203
@@ -322,7 +322,7 @@ http_access allow USERS
 
 ![7_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step1.png)
 
-* Terus restart squid menggunakan perintah.
+* Terus restart squid menggunakan perintah:
 
 ```
 service squid restart
@@ -338,7 +338,7 @@ service squid restart
   setiap hari Selasa-Rabu pukul 13.00-18.00. Bu Meguri membatasi penggunaan internet Anri hanya pada jadwal yang telah ditentukan itu saja. Maka diluar jam tersebut, Anri tidak   dapat mengakses jaringan internet dengan proxy tersebut.
   
  **PENJELASAN**
- * Pertama kami membuat file baru pada UML MOJOKERTO bernama acl.conf dalam folder squid
+ * Pertama kami membuat file baru pada UML *MOJOKERTO* bernama acl.conf dalam folder squid
 
 ```
 nano /etc/squid/acl.conf
@@ -369,7 +369,7 @@ service squid restart
   Setiap hari Selasa-Kamis pukul 21.00 - 09.00 keesokan harinya (sampai Jumat jam 09.00). Agar Anri bisa fokus mengerjakan TA.
  
  **PENJELASAN**
- * Pertama kami mengkonfigurasi acl pada MOJOKERTO dengan command. 
+ * Pertama kami mengkonfigurasi acl pada *MOJOKERTO* dengan command. 
 
 ```
 nano /etc/squid/acl.conf
@@ -385,7 +385,7 @@ nano /etc/squid/acl.conf
 nano /etc/squid/squid.conf
 ```
 
-* Selanjutnya restart squid dengan perintah.
+* Selanjutnya restart squid dengan perintah:
 
 ```
 service squid restart
