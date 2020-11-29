@@ -55,7 +55,7 @@ uml_switch -unix switch2 > /dev/null < /dev/null &
 uml_switch -unix switch3 > /dev/null < /dev/null &
 
 # Router
-xterm -T SURABAYA -e linux ubd0=SURABAYA,jarkom umid=SURABAYA eth0=tuntap,,,10.151.76.89 eth1=daemon,,,switch2 eth2=daemon,,,switch3 eth3=daemon,,,switch2 mem256M &
+xterm -T SURABAYA -e linux ubd0=SURABAYA,jarkom umid=SURABAYA eth0=tuntap,,,10.151.70.65 eth1=daemon,,,switch2 eth2=daemon,,,switch3 eth3=daemon,,,switch2 mem256M &
 
 # Server
 xterm -T MALANG -e linux ubd0=MALANG,jarkom umid=MALANG eth0=daemon,,,switch2 mem=160M &
@@ -149,7 +149,7 @@ nano /etc/dhcp/dhcpd.conf
 apt-get install isc-dhcp-relay
 ```
 
-* Setelah melakukan perintah tersebut akan muncul windows seperti dibawah ini. Dan masukkan ip TUBAN yaitu ``10.151.77.180``.
+* Setelah melakukan perintah tersebut, kemudian masukkan ip TUBAN yaitu ``10.151.71.132``.
 
 * Setelah memasukkan ip TUBAN, akan diminta untuk memasukkan konfigurasi interface seperti gambar dibawah ini.
 
@@ -176,7 +176,7 @@ subnet 192.168.0.0 netmask 255.255.255.0 {
     range 192.168.0.110 192.168.0.200;
     option routers 192.168.0.1;
     option broadcast-address 192.168.0.255;
-    option domain-name-servers 10.151.77.176 202.46.129.2;
+    option domain-name-servers 10.151.71.130 202.46.129.2;
     default-lease-time 300;
 }
 ```
@@ -224,10 +224,10 @@ nano /etc/dhcp/dhcpd.conf
 ```
 subnet 192.168.0.0 netmask 255.255.255.0 {
     range 192.168.1.50 192.168.1.70;
-    option routers 192.168.1.1;
-    option broadcast-address 192.168.1.255;
-    option domain-name-servers 10.151.77.176 202.46.129.2;
-    default-lease-time 600;
+    option routers 192.168.0.1;
+    option broadcast-address 192.168.0.255;
+    option domain-name-servers 10.151.71.130 202.46.129.2;
+    default-lease-time 300;
     max-lease-time 7200;
 }
 ```
