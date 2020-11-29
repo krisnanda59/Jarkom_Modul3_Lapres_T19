@@ -47,7 +47,7 @@ Teknis Pengerjaan
  
  **PENJELASAN**\
  Pertama-tama setting awal pembuatan UML. Sintaks dari gambar topologi yang di soal sebegai berikut;
- ![1_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomer1_setting%20mojokerto.jpg)
+ ![1_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor1_sintaks%20topologi.jpg)
  ```
  # Switch
 uml_switch -unix switch1 > /dev/null < /dev/null &
