@@ -160,13 +160,15 @@ nano /etc/dhcp/dhcpd.conf
   ```
   range 192.168.1.50 192.168.1.7
   ```
- 
-* Lalu lakukan service restart dengan perintah.
+![3_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
+
+
+  * Lalu lakukan service restart dengan perintah.
 
 ```
 service isc-dhcp-server restart
 ```
-![3_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step3_berhasil%20restart.png)
+![3_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step3_berhasil%20restart.png)
 
 * Kemudian lakukan konfigurasi pada interface client *GRESIK* dan *SIDOARJO* dengan perintah:
 
@@ -176,8 +178,8 @@ nano /etc/network/interfaces
 
 * Dan isi konfigurasi sesuai pada gambar dibawah ini.
 
-![3_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20gresik_step2.png)
-![3_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20sidoarjo_step1.png)
+![3_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20gresik_step2.png)
+![3_4](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20sidoarjo_step1.png)
 
 * Setelah itu lakukan testing dengan perintah. 
 ```
@@ -185,8 +187,8 @@ cat /etc/resolv.conf
 ```
 * Dan Berikut merupakan hasil dari kedua client yang telah dikonfigurasikan.
 
-![3_4](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20gresik_step4.png)
-![3_5](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20sidoarjo_step3.png)
+![3_5](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20gresik_step4.png)
+![3_6](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20client%20sidoarjo_step3.png)
 
 ## Soal 4
  **PERINTAH**\
