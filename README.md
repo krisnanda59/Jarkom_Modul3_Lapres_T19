@@ -160,6 +160,7 @@ apt-get install isc-dhcp-relay
 ## Soal 3
  **PERINTAH**\
   Client pada subnet 1 mendapatkan range IP dari 192.168.0.10 sampai 192.168.0.100 dan 192.168.0.110 sampai 192.168.0.200.
+  
  **PENJELASAN**\
   Pertama-tama konfigurasi subnet TUBAN untuk client GRESIK dan SIDOARJO dengan cara melakukan perintah.
 
