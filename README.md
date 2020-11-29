@@ -199,9 +199,9 @@ nano /etc/dhcp/dhcpd.conf
 ```
 
   * disini kami membuat konfigurasi, di *subnet 3* pada command  
-    ```
-  range 192.168.1.50 192.168.1.7
-  ```
+```
+range 192.168.1.50 192.168.1.7
+```
 
 ![4_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
