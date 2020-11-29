@@ -107,31 +107,25 @@ nano /etc/network/interfaces
   SURABAYA ditunjuk sebagai perantara (DHCP Relay) antara DHCP Server dan client.
 
  **PENJELASAN**\
-  Karena surabaya ditunjuk sebagai relay, maka kami melakukan install relay di surabaya dengan menggunakan command dibawah, setelah melakukan ```apt-get update```  
+  *  Karena surabaya ditunjuk sebagai relay, maka kami melakukan install relay di surabaya dengan menggunakan command dibawah, setelah melakukan ```apt-get update```  
   ``` 
   apt-get install isc-dhcp-relay
   ```
-  disini terdapat 3 prompt yang dapat diisi, pada prompt pertama kami mengisikan IP Tuban yaitu ```10.151.71.132```, prompt kedua kami isi dengan ``` eth1 eth2 eth3 ```  
+  *  disini terdapat 3 prompt yang dapat diisi, pada prompt pertama kami mengisikan IP Tuban yaitu ```10.151.71.132```, prompt kedua kami isi dengan ``` eth1 eth2 eth3 ```  
   
-  Kemudian barulah kami menginstall DHCP server pada tuban menggunakan command dibawah, setelah melakukan ```apt-get update```
+  *  Kemudian barulah kami menginstall DHCP server pada tuban menggunakan command dibawah, setelah melakukan ```apt-get update```
 ```
 apt-get install isc-dhcp-server
 ```  
-Proses instalasi isc-dhcp-relay pada surabaya setelah berhasil.
+  *  Proses instalasi isc-dhcp-relay pada surabaya setelah berhasil.
 ![2_4](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%202_install%20relay%20selesai_surabaya.png)
 
-
-
-
+  * Proses instalasi isc-dhcp-server pada tuban setelah berhasil.  
 ![2_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/persiapan_install%20dhcpserver_tuban%20_eror.png)
 
-* Setelah itu lakukan konfigurasi interface DHCP pada TUBAN. Setelah itu buka konfigurasi interface dengan perintah.
+  * Setelah itu kami melakukan konfigurasi pada TUBAN dengan menggunakan command ``` nano /etc/default/isc-dhcp-server ```
 
-```
-nano /etc/default/isc-dhcp-server
-```
-
-* Kemudian tentukan interfaces ``eth0`` untuk diberikan layanan DHCP.
+  * Kami menambahkan ``eth0`` pada  interfaces agar dapat diberikan layanan DHCP.
 
 ```
 INTERFACE=eth0
@@ -139,19 +133,16 @@ INTERFACE=eth0
 
 ![2_2](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/persiapan_install%20dhcp%20server_tuban%20_step%201.png)
 
-* Setelah itu lakukan konfigurasi DHCP pada TUBAN dengan command.
+  * Setelah itu lakukan konfigurasi DHCP pada TUBAN dengan command.
 
 ```
 nano /etc/dhcp/dhcpd.conf
 ```
 
-* Dan tambahkan script seperti pada gambar dibawah ini. Dan setelah itu lakukan restart servvice dengan perintah ``service isc-dhcp-server restart``
+  * Disini kami membuat satu subnet ``` subnet 10.151.71.128 netmask 255.255.255.248``` dimana subnet tersebut adalah dari DMZ kelompok kami. 
+  * Dan setelah itu lakukan restart servvice dengan perintah ``service isc-dhcp-server restart``
 
 ![2_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
-
-
-
-* Setelah memasukkan ip TUBAN, akan diminta untuk memasukkan konfigurasi interface seperti gambar dibawah ini.
 
 
 ## Soal 3
