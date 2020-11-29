@@ -107,15 +107,21 @@ nano /etc/network/interfaces
   SURABAYA ditunjuk sebagai perantara (DHCP Relay) antara DHCP Server dan client.
 
  **PENJELASAN**\
-  Setelah itu lakukan instalasi ISC-DHCP pada TUBAN. Lakukan package list pada TUBAN dengan command.
-
-```
-apt-get update
-```
-* Install ISC-DHCP dengan command.
+  Karena surabaya ditunjuk sebagai relay, maka kami melakukan install relay di surabaya dengan menggunakan command dibawah, setelah melakukan ```apt-get update```  
+  ``` 
+  apt-get install isc-dhcp-relay
+  ```
+  disini terdapat 3 prompt yang dapat diisi, pada prompt pertama kami mengisikan IP Tuban yaitu ```10.151.71.132```, prompt kedua kami isi dengan ``` eth1 eth2 eth3 ```  
+  
+  Kemudian barulah kami menginstall DHCP server pada tuban menggunakan command dibawah, setelah melakukan ```apt-get update```
 ```
 apt-get install isc-dhcp-server
-```
+```  
+Proses instalasi isc-dhcp-relay pada surabaya setelah berhasil.
+![2_4](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%202_install%20relay%20selesai_surabaya.png)
+
+
+
 
 ![2_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/persiapan_install%20dhcpserver_tuban%20_eror.png)
 
@@ -143,19 +149,10 @@ nano /etc/dhcp/dhcpd.conf
 
 ![2_3](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%203%2C4%2C5%2C6_%20konfigurasi%20di%20tuban_step1.png)
 
-* Kemudian lakukan penginstallan relay pada SURABAYA dengan command berikut.
 
-```
-apt-get install isc-dhcp-relay
-```
-
-* Setelah melakukan perintah tersebut, kemudian masukkan ip TUBAN yaitu ``10.151.71.132``.
 
 * Setelah memasukkan ip TUBAN, akan diminta untuk memasukkan konfigurasi interface seperti gambar dibawah ini.
 
-* Setelah itu proses instalasi isc-dhcp-relay pada surabaya telah berhasil seperti pada gambar dibawah ini.
-
-![2_4](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%202_install%20relay%20selesai_surabaya.png)
 
 ## Soal 3
  **PERINTAH**\
