@@ -409,8 +409,8 @@ nano /etc/suqid/squid.conf
 
 ```
 acl badsites dstdomain google.com
-
-terusin sampe 
+deny_info http://monta.if.its.ac.id badsites
+dny_info ERR_ACCESS_DENIED all
 http_reply_access deny badsites
 ```
 
