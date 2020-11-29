@@ -336,19 +336,24 @@ service squid restart
 nano /etc/squid/acl.conf
 ```
 
-* Lalu isikan seperti gambar dibawah ini.
-
-![8_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step2.png)
-
-* Setelah itu kami simpan filenya, kemudian buka file squid.conf menggunakan perintah
+* Pada acl.conf kami melakukan konfigurasi pada command
 
 ```
-nano /etc/squid/squid.conf
+ acl WAKTU time TW 13:00-18:00
+```
+
+![8_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20set%20waktu.png)
+
+* Waktu pada acl.conf didefinisikan disini pada command:
+
+```
+http_access allow USERS WAKTU
+http_access deny all
 ```
 
 * Setelah itu kami mengkonfigurasi seperti pada gambar dibawah ini.
 
-![](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step1.png)
+![8_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step1.png)
 
 * Kemudian restart squid menggunakan perintah.
 
@@ -367,7 +372,11 @@ service squid restart
 nano /etc/squid/acl.conf
 ```
 
-* Lalu dikonfigurasi sesuai dengan gambar dibawah ini.
+* Pada acl.conf kami melakukan konfigurasi pada command
+
+```
+ acl WAKTU time TWH 21.00-23.59
+```
 
 ![9_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20set%20waktu.png)
 
@@ -396,7 +405,14 @@ service squid restart
 nano /etc/suqid/squid.conf
 ```
 
-* Kemudian kami mengkonfigurasi seperti dibawah ini:
+* kami membuat konfigurasi pada commnad:
+
+```
+acl badsites dstdomain google.com
+
+terusin sampe 
+http_reply_access deny badsites
+```
 
 ![10_1](https://github.com/krisnanda59/Jarkom_Modul3_Lapres_T19/blob/main/dokumentasi%20shift%203/nomor%207_mojokerto%20step1.png)
 
