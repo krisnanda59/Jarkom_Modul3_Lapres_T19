@@ -301,8 +301,8 @@ nano /etc/dhcp.dhcpd.conf
 ## Soal 7
  **PERINTAH**\
   User autentikasi milik Anri memiliki format sebagai:
-  \User     :userta_yyy
-  \Password :inipassw0rdta_yyy
+  * User     :userta_yyy
+  * Password :inipassw0rdta_yyy
  
  **PENJELASAN**
  
